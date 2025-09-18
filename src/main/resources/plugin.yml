@@ -8,10 +8,13 @@ commands:
   locatorbarrange:
     description: Main command for LocatorBarRange plugin
     usage: /<command> reload
-    permission: locatorbarrange.group.admin
+    permission: locatorbarrange.command.locatorbarrange
     aliases: [lbr]
 
 permissions:
+  locatorbarrange.command.locatorbarrange:
+    description: Permission to use the /locatorbarrange command
+    default: op
   locatorbarrange.group.admin:
-    description: Admin group for LocatorBarRange
+    description: Default admin group for LocatorBarRange
     default: false

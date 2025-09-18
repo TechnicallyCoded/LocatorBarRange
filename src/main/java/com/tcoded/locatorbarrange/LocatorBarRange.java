@@ -40,4 +40,8 @@ public final class LocatorBarRange extends JavaPlugin {
         getServer().getOnlinePlayers().forEach(player -> AttributeUtility.removePlayer(player, this));
     }
 
+    public Config getConfiguration() {
+        return this.config;
+    }
+
 }

@@ -1,9 +1,11 @@
 package com.tcoded.locatorbarrange.command;
 
 import com.tcoded.locatorbarrange.LocatorBarRange;
+import com.tcoded.locatorbarrange.util.AttributeUtility;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
+import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +28,11 @@ public class LocatorBarRangeCommand implements TabExecutor {
         }
 
         plugin.reloadConfig();
+        for (Player player : this.plugin.getServer().getOnlinePlayers()) {
+            AttributeUtility.removePlayer(player, this.plugin);
+            AttributeUtility.updatePlayer(player, this.plugin.getConfiguration(), this.plugin);
+        }
+
         sender.sendMessage("§aLocatorBarRange configuration reloaded.");
 
         return true;

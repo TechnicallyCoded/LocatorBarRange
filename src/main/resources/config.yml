@@ -1,0 +1,14 @@
+world-settings:
+  _default_:
+    view-range: 300
+    send-range: -1 # Reset to vanilla defaults
+
+player-overrides:
+  admin:
+    # Higher values override lower values. Default settings for the world is -1.
+    # Therefore, you need to set a value of 0 or higher to override the world settings.
+    priority: 10
+    permission: "locatorbarrange.group.admin"
+    _default_:
+      view-range: 300
+      send-range: 0 # Never sends

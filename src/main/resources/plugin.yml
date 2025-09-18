@@ -1,0 +1,17 @@
+name: LocatorBarRange
+version: '1.0.0'
+main: com.tcoded.locatorbarrange.LocatorBarRange
+api-version: '1.21'
+folia-supported: true
+
+commands:
+  locatorbarrange:
+    description: Main command for LocatorBarRange plugin
+    usage: /<command> reload
+    permission: locatorbarrange.group.admin
+    aliases: [lbr]
+
+permissions:
+  locatorbarrange.group.admin:
+    description: Admin group for LocatorBarRange
+    default: false
